@@ -1,0 +1,643 @@
+/* make sure all items on the page have the border box property */
+* {
+    box-sizing: border-box;
+}
+
+/* map properties */
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+.map-wrapper {
+  position: relative;
+  display: flex; /* Use flexbox */
+  height: 100vh;
+  width: 100%;
+  margin-top: 0px;
+  margin-down: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Sidebar*/
+.sidebar {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 0;
+  width: 25%;
+  height: 95%;
+  background: rgba(250,250,250,0.6);
+  padding: 10px;
+  margin-top: 10px;
+  margin-down: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 9999999;
+}
+
+/* Checkbox*/
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  font-family: 'Roboto';
+  font-size:16px;
+}
+
+.checkbox ::before,
+.checkbox ::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+}
+
+/*Outer box of the fake checkbox*/
+.checkbox ::before{
+  height: 16px;
+  width: 16px;
+  border: 1px solid;
+  left: 10px;
+  top: 3px;
+}
+
+/*Checkmark of the fake checkbox*/
+.checkbox ::after {
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);    
+    left: 13px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + ::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + ::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + ::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+
+
+
+/* Titles and description*/
+
+#section-titles {
+  height:770px;
+  background-image: url("https://cdn.glitch.com/e3b533f6-f246-4672-af8a-fd97774061d3%2Fbackpalpala.jpg?v=1588460532341");
+  background-size: 100% 100%;
+}
+
+h1 {
+  color:white;
+  font-family: 'Roboto';
+  font-size:80px;
+  text-align: center;
+  font-weight:900;
+  margin-top: 0px;
+  padding-top:70px;
+  padding-left:230px;
+  margin-bottom:0px;
+}
+
+/* Dropdown Menu style*/
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding-top:120px;
+  font-size: 20px;
+  border: none;
+  font-family: 'Roboto';
+  font-weight:900;
+  border-bottom-style: ridge;
+  border-bottom-color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float:right;
+  padding-right: 130px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 16px;
+  font-family: 'Roboto';
+  background-color: transparent;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: transparent;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: transparent;}
+
+h2 {
+  color:white;
+  font-family: 'Roboto';
+  text-align: center;
+  margin-top:0px;
+  font-style: italic;
+}
+
+
+h3 {
+  color:white;
+  font-family: 'Roboto';
+  font-size:16px;
+  text-align: center;
+  margin-top:70px;
+}
+
+#section-summary {
+  margin-left:25%;
+  margin-right:25%;
+  margin-top:0px;
+}
+
+#text-summary {
+  color:white;
+  font-family: 'Roboto';
+  font-size:16px;
+  text-align: justify;
+  font-weight: 100;
+  line-height:1.5;
+}
+
+
+/* Section Project description */
+
+h4 {
+  color:black;
+  font-family: 'Roboto';
+  font-size:60px;
+  text-align: center;
+  background-color: white;
+  font-weight: 900;
+  padding-top: 100px;
+  margin-top:0px;
+  margin-bottom:30px;
+}
+
+#section-description{
+  height:770px;
+  background-color:#white;
+  padding: 0px;
+}
+
+#text-description {
+  color:black;
+  font-family: 'Roboto';
+  font-size:16px;
+  text-align: justify;
+  margin-left:25%;
+  margin-right:25%;
+  margin-top:15px;
+  font-weight: 100;
+  line-height:1.5;
+}
+
+
+/* Section Timeline */
+
+h5 {
+  color:black;
+  font-family: 'Roboto';
+  font-size:60px;
+  text-align: center;
+  background-color: #eff0f0;
+  font-weight: 900;
+  padding-top:120px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+
+#section-time{
+  height:100vh;
+  background-color: #eff0f0;
+  padding: 0px;
+}
+
+#timeline-container {
+  display: flex;
+  flex-direction: row;
+  flexwrap: wrap;
+}
+ 
+.timeline-box{
+  flex-basis:30%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 25px;
+}
+
+
+#title-2002{
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:0px;
+}
+
+#text-2002{
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+
+#title-2004 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:0px;
+}
+
+#text-2004{
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+#title-2005 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:0px;
+}
+
+#text-2005 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+
+#section-time-2{
+  height:100vh;
+  background-color: white;
+  padding: 0px;
+ 
+}
+
+#timeline-container-2{
+  display: flex;
+  flex-direction: row;
+  flexwrap: wrap;
+}
+ 
+.timeline-box-2{
+  flex-basis:30%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 25px;
+}
+
+#title-2006 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:50px;
+}
+
+#text-2006 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+#title-2011 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:50px;
+}
+
+#text-2011 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+#title-2013 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:50px;
+}
+
+#text-2013 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+#section-time-3{
+  height:100vh;
+  background-color: #eff0f0;
+  padding: 0px;
+ 
+}
+
+#timeline-container-3{
+  display: flex;
+  flex-direction: row;
+  flexwrap: wrap;
+}
+ 
+.timeline-box-3{
+  flex-basis:30%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 25px;
+}
+
+#title-2015 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:10px;
+}
+
+#text-2015 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+#title-2016 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:10px;
+}
+
+#text-2016 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+#title-2018 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:50px;
+  font-weight:bold;
+  padding-top:10px;
+}
+
+#text-2018 {
+  font-family: 'Roboto';
+  color:black;
+  font-size:16px;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+.bold-text-timeline {
+  font-weight: 900;
+}
+
+/* Section Methodology and More info */
+
+h6 {
+  color:black;
+  font-family: 'Roboto';
+  font-size:60px;
+  text-align: center;
+  background-color: white;
+  font-weight: 900;
+  margin-top:20px;
+  margin-bottom:30px;
+  padding-top:100px;
+}
+
+
+#text_morei {
+  font-family: 'Roboto';
+  font-size:16px;
+  color: black;
+  text-align: center;
+  margin-left:25%;
+  margin-right:25%;
+  font-weight: 100;
+  text-align: justify;
+  line-height:1.5;
+}
+
+
+#section-methods{
+  height:100vh;
+  background-color: white;
+  padding: 0px;
+  margin-top: 0px;
+  margin-down: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  line-height:1.5;
+}
+
+#text-methods {
+  font-family: 'Roboto';
+  font-size:16px;
+  color: black;
+  text-align: center;
+  margin-left:25%;
+  margin-right:25%;
+  font-weight: 100;
+  text-align: justify;
+}
+
+/* Map Pop up styles */
+
+#popname {
+  font-family: 'Roboto';
+  font-size:20px;
+  color:red;
+  font-weight:bold;
+}
+
+#popcategory {
+  font-family: 'Roboto';
+  font-size:14px;
+  color:black;
+}
+
+#poptype {
+  font-family: 'Roboto';
+  font-size:14px;
+  color:red;
+}
+
+#popdecrip{
+  font-family: 'Roboto';
+  font-size:12px;
+  color:black;
+}
+
+#poppark {
+  font-family: 'Roboto';
+  font-size:12px;
+  color:black;
+}
+
+#popstreet {
+  font-family: 'Roboto';
+  font-size:12px;
+  color:black;
+}
+
+/* Checboxes styles */
+
+#text-info-available {
+  font-family: 'Roboto';
+  color:black;
+  font-size:18px;
+  font-weight:bold;
+  margin-top:40px;
+  text-align: justify;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+#text-park-location {
+  font-family: 'Roboto';
+  color:black;
+  font-size:18px;
+  font-weight:bold;
+  margin-top:40px;
+  text-align: justify;
+   margin-left:10px;
+  margin-right:10px;
+}
+
+/* Legends on map */
+#factories-legend{
+  font-family: 'Roboto';
+  color:black;
+  font-size:18px;
+  font-weight:bold;
+  margin-top:40px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align: justify;
+}
+
+#factories-color{
+  color:#A60311;
+}
+
+#Neighborhood-color{
+color:#d9bd30;
+}
+
+#Parks-color{
+color: #8da17f;  
+}
+
+#Municipality-color{
+  color:#d9bd30;
+}
+
+.info-available-checkbox {
+  border-radius: 0;
+}
+
+
+
+/* EB: don't let images get larger than popup width */
+.leaflet-popup img {
+  max-width: 100%;
+}
+
+#For-more-information {
+font-weight: 900;  
+}
+
+.timeline-title-wrapper {
+  display: flex;
+}
+
+.timeline-title-line {
+  border-bottom: 1px solid black;
+  flex-grow: 1;
+  margin-bottom: 35px;
+  margin-left: 20px;
+  margin-right:10px;
+}
+
+.leaflet-control-zoom a{
+background-color: transparent;
+float:right;
+}
+

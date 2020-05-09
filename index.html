@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <!-- Load Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+    
+    <!-- import the webpage's javascript file -->
+    <script src="./script.js" defer></script>
+    
+    <!--  I'm using google fonts (Inconsolata)  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+  </head>  
+  
+  <body>
+     <!-- Header and description-->
+   
+    <div id= "section-titles">
+    <header>
+      
+        <!-- Dropdown Menu-->
+      
+         <div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="#map">Map</a>
+    <a href="#section-description">Project Description</a>
+    <a href="#section-time">Timeline 2002-2005</a>
+    <a href="#section-time-2">Timeline 2006-2013</a>
+    <a href="#section-time-3">Timeline 2014-2018</a>
+    <a href="#section-methods">Methodology</a>
+  </div>
+    </div>
+      
+      <h1> The City of Palpalá  </h1>    
+      <h2>Moving to the beat of industrial factories </h2>
+      <h3> By Mariana Peinado</h3>
+      <div id="section-summary">
+      <p id= "text-summary">
+      The purpose of this project is to unveil the development of industrial parks in the city of Palpalá, Argentina, that started around 1990. In pursuing this topic, this project expects also to contribute to the scarce literature regarding industrial development and contamination in peripherical cities of South America. A map, a timeline, and some additional information about other projects about this issue are displayed on this page.  
+      </p>
+      </div> 
+     </header>
+    </div>  
+   
+    
+
+    <!-- Second section Map, sidebar and checkboxes -->  
+       <div class="map-wrapper">
+          <div id="map"></div> 
+          <div class="sidebar">
+            
+            <div id="factories-legend">
+              According to available records there are <span id = "factories-color"> around 62 factories </span> active in the City.  
+              <span id= "Neighborhood-color"> Neighborhoods  </span> shown in the map have been reported as contaminated areas. In 2016, the Superior Court of Jujuy ordered a compensation for residents living in some of them. 
+              <span id = "Parks-color"> Parks, soccer fields </span> and other public open spaces, as well as 
+              <span id = "Municipality-color"> the local authority </span> are shown in the map. 
+            </div>
+            
+            <div id="text-info-available" >
+              For 11 factories there is part of the data that was not confirm, such as name or type of production, mainly due to lack of sources of information available. Nevertheless, these factories are included in the map and identified as features with no data available.      
+            </div>
+            
+           <div class="checkboxes">
+             <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="info-available-checkbox" />
+                  <span class="checkmark"></span>
+                  Data available
+                </label>
+              </div>
+              <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="no-info-available-checkbox" />
+                  <span class="checkmark"></span>
+                  No data available
+                </label>
+              </div>
+            </div>
+            
+            <div id="text-park-location" >
+               Industrial Parks 
+            </div>
+           
+            <div class="checkboxes" id="checkbox-parks">
+             <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="Noria-checkbox" />
+                  <span class="checkmark"></span>
+                  Parque La Noria   
+                </label>
+              </div>
+              <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="Zapla-checkbox" />
+                  <span class="checkmark"></span>
+                  Parque Industrial Aceros Zapla
+                </label>
+              </div>
+              <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="Snopek-checkbox" />
+                  <span class="checkmark"></span>
+                  Parque Indrustial Ing. Snopek   
+                </label>
+              </div>
+              <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="Brete-checkbox" />
+                  <span class="checkmark"></span>
+                  Parque El Brete Forestal 
+                </label>
+              </div>
+              <div>
+                <label class ="checkbox">
+                  <input type="checkbox" class="La-Torre-checkbox" />
+                  <span class="checkmark"></span>
+                  Parque Alto la Torre
+                </label>
+              </div>
+            </div>
+            
+         </div>
+        </div>
+      
+   
+     <!-- Third section Timeline -->  
+    
+    <div id="section-description">
+      <h4> Project description </h4>  
+      <p id="text-description">
+      The city of Palpalá is situated in the valleys of Jujuy, in the northern region of Argentina. To the north, the city adjoins the Rio Grande river and to the west it adjoins the City of San Salvador de Jujuy. One of the most important characteristics of Palpalá is that its growth has been directly connected to and influenced by the growth of the public steel company Altos Hornos Zapla -today Acero Zapla S.A-. The city of Palpalá flourished after the discovery of iron mines in 1941. This led to the foundation of Altos Hornos Zapla in 1943. The company operated as a public company until it was privatized in 1991. The advent of industrial parks in Palpalá began that same year, as a direct consequence of the privatization of Altos Hornos Zapla. Today there are five different parks spread throughout the city of Palpalá: Acero Zapla, La Noria, Parque Ing. Carlos Snopek, Alto La Torre and El Brete Forestal. Each industrial park contains a cluster of factories. Together, they house a total of 62 companies that are active and producing different types of products, such as iron, zinc, lead, silver metal, chemistries, sulfuric acid, boron derivates and polyethylene among others. There are also sawmills, loggers, foundries and wood manufacturing industry in the area. 
+      As parks get bigger and more factories settled in the City,  residents of the city started raising flags. Many complained about the effects that contamination has on the environment (including acid rain) and on resident's health living in the area (such as lead poisoning -also called plumbism- and allergic diseases that causes affection of the respiratory tract). Many factories are situated close to residential housing.    
+      </p>
+    </div>
+     
+    <!-- Fourth section Timeline -->  
+    <div id="section-time"> 
+      <h5> Timeline </h5>
+      
+        <div id="timeline-container">
+        
+        <div id ="box-2002" class="timeline-box">
+          <div class="timeline-title-wrapper">
+          <div id = "title-2002"> 
+            2002
+          </div>
+            <div class="timeline-title-line"></div>
+          </div> 
+          <div id = "text-2002"> 
+            The Environmental Management Department of the Municipality of Palpalá starts monitoring industrial activity in the area (according to information from the Superior Court of the province of Jujuy). But because the municipality lacked adequate appliances to carry on a proper monitoring, <span class= "bold-text-timeline"> they only used visual and olfactory surveys.</span> The monitoring started after complaints of emission of smoke and irritating gases were issued. 
+          </div> 
+        </div>
+      
+        <div id="box-2004" class="timeline-box">
+          <div class="timeline-title-wrapper">
+          <div id="title-2004">
+            2004
+          </div>
+            <div class="timeline-title-line"></div>
+         </div>
+          <div id= "text-2004">
+         The Ministry of Social Welfare of the Province of Jujuy conducted an analysis of environmental pollution in areas close to industrial parks. After the analysis, the Ministry commented that <span class= "bold-text-timeline"> the population is exposed to lead through contamination of air, water, soils and food. Among the main activities that cause it is mining and smelting processes”.</span> The study highlights that many industries that used lead on their processes were located less than 100 meters away from residential housing. The analysis also considered a high-risk area of lead contamination, any area located within a radius of 1 to 2 kilometers from the source that emits lead. The subpopulation at most risk were pregnant women, children under five years and people with nutritional deficiencies. 
+          </div>
+        </div>
+          
+          <div id ="box-2005" class="timeline-box">
+            <div class="timeline-title-wrapper">
+            <div id = "title-2005"> 
+            2005
+          </div>
+            <div class="timeline-title-line"></div>
+           </div>
+          <div id = "text-2005"> 
+            Neighbors from 23 de Agosto organized protests the opening of a new factory close to the neighborhood in Alto la Torre Park. The marched under the name of “Vecinos Autoconvocados”. They were protesting because <span class= "bold-text-timeline"> the factory was about to be located at less than 100 meters from residential housing. </span> The factory that they tried to prevent from opening was Sulfhaar company, a sulfuric acid producer. 
+            For more information in Spanish check <a href="https://www.anred.org/2006/10/10/palpala-sigue-golpeando-puertas-en-buenos-aires/" target="_blank"> the press coverage from ANRed.</a>
+            </div>
+          </div>   
+        
+        </div>
+    </div>
+    
+     <!-- Timeline continue-->  
+    <div id="section-time-2"> 
+      
+       <div id="timeline-container-2">
+       <div id ="box-2006" class="timeline-box-2">
+         <div class="timeline-title-wrapper">
+          <div id = "title-2006"> 
+            2006
+          </div>
+           <div class="timeline-title-line"></div>
+         </div>
+          <div id = "text-2006"> 
+            The local government of Palpalá <span class = "bold-text-timeline"> declared Environmental and Sanitary emergency </span> (municipal executive regulation 845/06). According to the text of the declaration, many factories located in Palpalá were established without considering a proper territorial delimitation or the degree of contamination that these industrial settlements could cause. The lack of these forecasts facilitated the location of industries adjoining residents housing. The local government warned about cases of lead poisoning and a high degree of lead contamination in soil, air and water in the city. On that same year, Soledad López, a neighbor living  in 23 de Agosto, spoked with to the national press and tell that <span class= "bold-text-timeline"> 32 out of 100 people that were analyzed in her neighborhood tested positive for lead contamination in their blood. </span> Her granddaughter (7 years old at the time) was on the group of people that tested positive. She said “two or three times a week her bones hurt, and she cries, she can't play normally like other child”. 
+         </div>
+         </div> 
+        
+         <div id ="box-2011" class="timeline-box-2">
+          <div class="timeline-title-wrapper">
+           <div id = "title-2011"> 
+            2011
+          </div>
+             <div class="timeline-title-line"></div>
+          </div>
+          <div id = "text-2011"> 
+           Marcelo Sánchez, a 23-year-old resident of the city <span class= "bold-text-timeline"> fell on a mountain of slag from a steel factory and died </span>. The mountain of slag was situated in a place that has become a landfill site for chemical waste. This material is toxic and dangerous when it is thrown over time on the same site without giving it a proper treatment. For more information about this incident <a href="https://www.jujuyalmomento.com/jujuy/repercusiones-la-tragedia-marcelo-sanchez-palpala-n2904" target="_blank"> read the local press coverage in Spanish </a> and the <a href="https://www.jujuyalmomento.com/jujuy/residuos-quimicos-aceros-zapla-ya-habia-sido-sancionada-n2915" target="_blank"> explanations offered by the local authority</a>
+           </div>
+         </div>
+         
+         <div id ="box-2013" class="timeline-box-2">
+            <div class="timeline-title-wrapper">
+          <div id = "title-2013"> 
+            2013
+          </div>
+            <div class="timeline-title-line"></div>
+           </div>  
+          <div id = "text-2013">
+            The Secretary of Environmental Management of Jujuy carried out an administrative investigation due to complaints from residents of Palpalá and by the Municipality of Palpalá. The Secretary ordered to suspend two factories in Alto la Torre: Sulfhaar SRL and Lead Metal. They were found responsible for environmental contamination derived from contaminant waste produced by their industrial activities.  In addition, the Municipality of Palpalá suspended municipal authorizations for the companies. The residents of 23 de Agosto, who lived close to these companies were outraged. According to them <span class= "bold-text-timeline"> “despite the suspensions issued by the local authority and the provincial authority, the companies continue operational”.</span>
+            Read the local press coverage in Spanish <a href="https://www.jujuyalmomento.com/jujuy/empresas-contaminantes-palpala-desconocen-inhabilitacion-municipal-n7507" target="_blank"> here</a> .
+            The local media coverage also reported chemical contamination in Florida neighborhood. Read the local press coverage about chemical contamination <a href="https://www.eltribuno.com/jujuy/nota/2013-8-3-21-28-0-contaminacion-por-quimicos-en-palpala" target="_blank"> here</a>.   
+           </div>
+         </div> 
+      </div>
+    </div>
+ 
+     <!-- Timeline continue-->  
+    <div id="section-time-3">
+ 
+    <div id="timeline-container-3">
+       
+      <div id ="box-2015" class="timeline-box-3">
+        <div class="timeline-title-wrapper">
+          <div id = "title-2015"> 
+            2015
+          </div>
+           <div class="timeline-title-line"></div>
+        </div>
+          <div id = "text-2015"> 
+          Local press coverage reported a deterioration in the environmental situation of the neighborhoods close to Alto la Torre (23 de Agosto, Florida y Carolina). Many residents protested against the extension works of the power distribution transformer plant infrastructure -known as “La Usina”- located in Alto la Torre. Jonathan Arena, one of the residents of the city, spoked with to the local press and tell that the power plant is situated only 60 meters away from residential housing, which can be engender hazards for the residents, many of whom already is suffering health issues derived from environmental contamination in the area.   Read the local press coverage <a href=" https://www.jujuyalmomento.com/palpala/vecinos-se-oponen-la-ampliacion-una-estacion-transformadora-n25412" target="_blank"> here</a>. 
+        </div>
+         </div>
+      
+      <div id ="box-2016" class="timeline-box-3">
+        <div class="timeline-title-wrapper">
+          <div id = "title-2016"> 
+            2016
+          </div>
+          <div class="timeline-title-line"></div>
+         </div>
+          <div id = "text-2016"> 
+          The Superior Court of the province of Jujuy condemned the Municipality of Palpalá and ordered a pecuniary compensation for residents due to damages that impacted resident’s health status. According to the Court, the local government is responsible for these damages given that it failed to properly execute its police power over the industrial activity in the city. According to the Court, the city government had authority to control, plan and modify its housing policies, in order to avoid or deter the housing construction in sites that are close to risky activities that may harm the residents.
+          The verdict of the Court confirmed that <span class="bold-text-timeline"> waste from factories located in Alto la Torre -especially the slags left over from the smelting processes- were not stored properly. When exposed, the rainwater drained off the lead remains in the waste by air, depositing a very high dose of lead in the surroundings of the city over the last 30 years.</span> Because of this, the Court understands that the contaminants are above allowable limits, based on the data that some companies have share from 1999, as well as statements from the municipal government (regulation Number 845/06). 
+          Read the complete verdict from the Court in Spanish <a href="http://www.saij.gob.ar/municipalidad-palpala-debe-responder-danos-perjuicios-materia-contaminacion-ambiental-nv14060-2016-03-07/123456789-0abc-060-41ti-lpssedadevon" target="_blank"> here </a>.  
+        </div>
+         </div>
+      
+      <div id ="box-2018" class="timeline-box-3">
+        <div class="timeline-title-wrapper">
+          <div id = "title-2018"> 
+            2018
+          </div>
+          <div class="timeline-title-line"></div>
+        </div>
+          <div id = "text-2018">
+          The Secretary of Environmental Quality and the Municipality of Palpalá jointly closed the company Lead Metal SRL. The reason given by the authorities for the closing was that the company operated with hazardous waste in Alto la Torre. The authorities expressed that part of the activities of Lead Metal included the treatments of disposed batteries, which engendered the emission of lead into the air. The factory violated the environmental provincial and local regulations because it had no ceiling and it was exposed to soil lead contamination.  Read the local media coverage in Spanish <a href=" https://www.eltribuno.com/jujuy/nota/2018-3-12-21-51-0-empresa-clausurada-por-contaminacion" target="_blank"> here </a>.  
+          </div>
+         </div>
+      
+      
+    </div>
+    </div>
+    
+     <!-- Fifth section Methods -->  
+    <div id="section-methods"> 
+      <h6> Methodology </h6>    
+      <p id="text-methods">
+      In order to map the industrial parks in city of Palpalá, data from Open Street Maps, Google maps and information available in the website of the Ministry of Production of Jujuy were gathered and compatibilized in order to produce a dataset showing the location of the factories spread in the five industrial parks in the City, and the type of production for each one. Images (when available) were pulled out from Google Maps. The dataset was uploaded to ArcGIS for edition and finally to Carto. 
+      The area of study includes the entire city of Palpalá, which occupies 437square kilometers (equivalent to around 169 square miles) with a population of 52,600. By using computing coding, the information available in Carto was upload to Glitch in order to add style and interactive elements to the map. In order to produce a timeline that displays the actions taken by the government of Jujuy, the local government and the residents from different contaminated neighborhoods, information was pulled out from scholarly papers, local media coverage, national media coverage and online archives from the local and state government. The research includes information from analysis of environmental pollution conducted by state agencies and private companies, administrative investigations, law regulations and the most important judicial verdict on this matter ruled by the Superior Court of the Province of Jujuy. 
+      </p>
+      
+      <p id="text_morei"> 
+        <span id="For-more-information"> For more information </span> check <a href="https://www.trtworld.com/americas/a-story-of-contamination-and-corruption-in-argentina-24506" target="_blank"> A story of contamination and corruption in Argentina. </a>
+      In addition, there are testimonies from residents that were collected by investigative journalists in 2009 and broadcasted on the TV. This material is available in Spanish <a href="https://www.youtube.com/watch?v=Qayo55GegCk" target="_blank"> here </a>.     
+      </p>
+    </div>
+    
+  
+    
+    
+  </body>
+</html>
